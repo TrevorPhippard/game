@@ -1,0 +1,230 @@
+/*----------------------------------------------------------------/
+  base: variable
+/*----------------------------------------------------------------*/
+
+:root {
+  --main-bg-color: brown;
+
+  /* bg-colors */
+  --primary-bg-color: #FFFFFF;
+  --secondary-bg-color: #c5bfe7;
+  --tertiary-bg-color: #1e1c2e;
+  --info-bg-color: #a7ffcc;
+  --warning-bg-color: #ffa7a7;
+  --alert-bg-color: #fff0a7 --primary-font-color: #808080;
+  --secondary-font-color: #ffffff;
+  --info-font-color: #00ff6a;
+  --warning-font-color: #ff0000;
+
+  /* font-specs */
+  --primary-font-family: sans-serif;
+  --primary-font-size: 16px;
+  --primary-line-height: 1.5rem;
+  --primary-letter-spaceing: 0.8pt;
+
+  /* font-colors */
+  --primary-border-color: #D3DDE5;
+  --secondary-border-color: #a3a3a3;
+
+  /* button-colors */
+  --btn-color: #FCFDFF;
+  --btn-bg-color: #2A2A72;
+
+  --btn-primary-bg-color: #2A2A72;
+  --btn-secondary-bg-color: #a3a3a3;
+
+  /* effects */
+  --primary-shadow-color: #292929;
+  --corners: 10px;
+
+  /* button-colors */
+
+  --x-small-screen-size: 320px;
+  --small-screen-size: 480px;
+  --middle-screen-size: 980px;
+  --large-screen-size: 1200px;
+  --x-large-screen-size: 1960px;
+}
+
+/*----------------------------------------------------------------/
+  base: default
+/*----------------------------------------------------------------*/
+
+body,html,ul {
+  margin: 0;
+  padding: 0
+}
+
+body,html {
+  background-color: var(--secondary-border-color)
+}
+
+html {
+  color: var(--primary-font-color);
+  font: var(--primary-font-size)/var(--primary-line-height) var(--primary-font-family);
+  letter-spacing: var(--primary-letter-spaceing)
+}
+body {
+  box-sizing: border-box
+}
+
+/* --------------------------------------
+   layout : default 
+  -------------------------------------- */
+ 
+  .flex-container {
+    background: var(--primary-bg-color);
+    display: grid;
+    gap: 1.75rem;
+    grid-template-columns: 20px 3fr 9fr;
+    grid-template-rows: calc(100vh - 85px);
+    height: 100%;
+    margin: 20px;
+    padding: 20px;
+    place-items: center center;
+    position: relative
+  }
+  
+  .flex-container>* {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 100%
+  }
+
+  article {
+    background: var(--secondary-bg-color);
+    display: grid;
+    grid-template-rows: 3fr 1fr;
+    overflow: hidden;
+    position: relative
+  }
+
+  .screen{
+    background-color: turquoise;
+  }
+  
+  /* --------------------------------------
+   layout : spacing 
+  -------------------------------------- */
+  
+  article ul,aside ul {
+    overflow-y: scroll;
+  }
+  article ul{
+    padding: 0 20px 20px
+  }
+  aside ul {
+    padding-right: 5px
+  }
+  aside ul li {
+    margin-top: 10px
+  }
+  input,nav {
+    padding: 10px
+  }
+  nav ul li{
+    padding: 10px 0;
+  }
+  footer {
+    display: flex;
+    padding: 0 20px 20px
+  }
+
+  textarea {
+    flex: 1;
+    height: 100px;
+    padding: 10px
+  }
+
+  header{
+    display: flex;
+    justify-content: space-between;
+  }
+
+  header ul{
+    display: flex;
+    align-items: center;
+  }
+ 
+/* --------------------------------------
+   module : buttons 
+  -------------------------------------- */
+
+  footer button {
+    background-color: #292929;
+    color: #ddd
+  }
+/* --------------------------------------
+   module : users 
+  -------------------------------------- */
+  
+  .user {
+    align-items: center;
+    display: flex;
+    border-radius: var(--corners)
+  }
+  
+  .user-bg {
+    background-color: #ddd
+  }
+  
+  .user-img {
+    background-color: #999;
+    border-radius: 50%;
+    color: #ddd;
+    font-size: 25px;
+    margin-right: 15px;
+    padding: 5px 10px;
+  }
+  
+  aside .user-img {
+    margin-left:10px
+  }
+  .user-info{
+    display: flex;
+    flex: 1;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .user-info i{
+    font-size: 10px;
+    padding-right: 10px;
+  }
+
+  /* --------------------------------------
+   effects
+  -------------------------------------- */
+
+  .round {
+    border-radius: var(--corners)
+  }
+  
+  .bottom {
+    bottom: 30px;
+    left: 17px;
+    position: absolute
+  }
+  
+  input {
+    border: 1px solid #ddd;
+    border-radius: var(--corners);
+    margin-bottom: 10px
+  }
+  
+  nav {
+    background-color: var(--tertiary-bg-color);
+    color: var(--secondary-font-color);
+    font-size: 36px
+  }
+  ul {
+    height: 100%;
+    list-style: none
+  }
+  
+  ul li:hover {
+    cursor: pointer;
+    opacity: .5
+  }
+  
