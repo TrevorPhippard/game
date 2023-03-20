@@ -1,17 +1,26 @@
-GET http://localhost:3000/users
+GET http://localhost:8000/
 
 ###
 
-POST http://localhost:3000/users Content-Type: application/json
+GET http://localhost:8000/profile
+
+###
+POST http://localhost:8000/user/delete 
+###
+
+
+POST http://localhost:8000/user/register 
+Content-Type: application/json
 
 {
-"name": "Kyle", "password": "password"
+"first_name":"first_name", "last_name":"last_name", "username":"username", "password":"password", "email":"email", "id":2
 }
 
 ###
 
-POST http://localhost:3000/users/login Content-Type: application/json
+POST http://localhost:8000/user/login 
+Content-Type: application/json
 
 {
-"name": "Kyle", "password": "password"
+"name": "test", "password": "password"
 }
